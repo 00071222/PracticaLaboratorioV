@@ -206,7 +206,7 @@ sudo nano /etc/nginx/sites-available/intranet.redes.uca
 ```
 server {
 	listen 80;
-	listen [::]:;
+	listen [::]:80;
 	root /var/www/html;
 	index index.html index.htm index.nginx-debian.html;
 	server_name intranet.redes.uca;
@@ -308,14 +308,10 @@ push "route 192.168.1.0 255.255.255.0"
 client-to-client
 ```
 ```
-
-```
-```
 sudo nano /etc/sysctl.conf
 ```
 ```
 net.ipv4.ip_forward=1
-```
 ```
 ```
 sudo sysctl -p /etc/sysctl.conf
