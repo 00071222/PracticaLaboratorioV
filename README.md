@@ -89,13 +89,20 @@ $TTL    604800
 ```
 ```
 cd ..
+```
+```
 sudo su
+```
+```
 nano resolv.conf
 ```
 ```
 nameserver 127.0.0.1
 options edns0
 search redes.uca
+```
+```
+exit
 ```
 ```
 sudo systemctl restart bind9
@@ -321,4 +328,7 @@ sudo systemctl start openvpn@server
 ```
 ```
 sudo systemctl enable openvpn@server
+```
+```
+sudo systemctl status openvpn@server
 ```
